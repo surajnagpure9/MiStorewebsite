@@ -1,235 +1,115 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Mi Store</title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style>
 
-    <style>
-body, html {
+html,
+body,
+header,
+.view {
   height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-
- 
-
-.carousel-inner {
-		  padding-top: 50px;
-      width: 100%;
-      height: 100%;
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 1000px;
   }
-
-* {
-  box-sizing: border-box;
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 600px;
+  }
 }
 
-.bg-img {
-  /* The image used */
-  background-image: url("supplier.png");
-
-  min-height: 565px;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+.btn .fa {
+  margin-left: 3px;
 }
 
-/* Add styles to the form container */
-
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
+.top-nav-collapse {
+  background-color: #424f95 !important;
 }
 
-input[type=text]:focus, input[type=file]:focus {
-  background-color: #ddd;
-  outline: none;
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
 }
 
-/* Set a style for the submit button */
-.btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #424f95 !important;
+  }
 }
 
-.btn:hover {
-  opacity: 1;
+.btn-white {
+  color: black !important;
 }
 
-@media (max-width: 770px) {
- #new{
-		  padding-bottom: 200px;
-     
-  } 
-
-
-
-
+h6 {
+  line-height: 1.7;
 }
 
- 
-
+.rgba-gradient {
+  background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+  background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+}
 
 </style>
-  
-  
-  </head>
-<body>
-<div id="new">
-<nav class="navbar navbar-inverse" style="height:60px;">
-  <div class="container-fluid">
-  
-    <ul class="nav navbar-nav" >
-	  <li><img src="logo.jpg"/></li>
-	   <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Product<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="product.html">Product List</a></li>
-          <li><a href="addproduct.html">Add Product</a></li>
-          <li><a href="print.html">Print Barcode/Label</a></li>
-        </ul>
-      </li>
-	  
-	  
-	  
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Supplier <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="supplier.html">Supplier List</a></li>
-          <li><a href="addsupplier.html">Add Supplier</a></li>
-        </ul>
-      </li>
-	  
-       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Purchase<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="purchase.html">Purchase List</a></li>
-          <li><a href="addpurchase.html">Add Purchase</a></li>
-        </ul>
-      </li>
-	  
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Billing<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="invoicel.html">Invoice List</a></li>
-        </ul>
-      </li>
-	  
-	
-	  <li><a href="login.html"><button type="button" class="btn btn-Default" style="font-size:20px; margin-top:-17px">Login</button></a></li>
-    </ul>
-  </div>
-</nav>
- </div> 
+<script>
+// Animations init
+new WOW().init();
+</script>
+</head>
 
-  <div id="myCarousel" class="carousel slide" data-ride="carousel"><!---for moving--->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="one.png" alt="Los Angeles" style="width:100%;">
-      </div>
 
-      <div class="item">
-        <img src="two.png" alt="Chicago" style="width:100%;">
-      </div>
+
+
+    <body>
+
+      
+          <!-- Full Page Intro -->
+          <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient align-items-center">
+              <!-- Content -->
+              <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                    <h1 class="h1-responsive font-weight-bold mt-sm-5">Shooping Site And Restaurant Site</h1>
+                    <hr class="hr-light">
+                <a href="https://surajnagpure9.github.io/MiStoreSite/index.html" class="btn btn-primary">SHOPPING WEBSITE</a><br><br>
+				<p  class="text-white bg-dark"> Description:--It's MI STORE WEBSITE.All Xiaomi Phones with Responsive Layout.For Designing I have used HTML,CSS,BOOTSTRAP.It's </p>
+                <a href="https://surajnagpure9.github.io/Restaurant_website/HOME.html" class="btn btn-success">RESTAURANT WEBSITE</a><br><br>
+				<p  class="text-white bg-dark"> Description:--It's BOMBAY BOWL RESTAURANT SITE.For designing I have used HTML,CSS.It's only desktop/laptop friendly.</p>
+                  </div>
+                
+                  <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                    <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png" alt="" class="img-fluid">
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
     
-      <div class="item">
-        <img src="three.png" alt="New york" style="width:100%;">
-      </div>
-    </div>
-
-
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
- 
-</div>
-<br>
-<div style="background-color:#000000; font-varient:Calibri (Headings);font-size:15px;line-height: 26pt; color:grey;"class="container-fluid ">
-<div class="row">
-<div class="col-md-2">
-<center>
-SUPPORT<br>
-Online Help<br>
-Customer Service<br>
-Shipping FAQ<br>
-Service Centres<br>
-Warranty<br>
-Bulk Orders<br>
-Mi Exchange<br>
-Mi Protect / Mi Screen Protect<br>
-Mi TV Extended Warranty<br>
-</div>
-
-
-<div class="col-md-2">
-<center>
-SHOP AND LEARN<br>
-Mi MIX 2<br>
-Redmi Y2<br>
-Mi A2<br>
-Redmi 6 / Redmi 6A / Redmi 6 Pro<br>
-Redmi Note 7 Pro / Redmi Note 6 Pro<br>
-POCO F1<br>
-Redmi Note 7<br>
-</div>
-
-<div class="col-md-2">
-<center>
-RETAIL STORE<br>
-Mi Home<br>
-Mi Authorized Stores<br>
-</div>
-
-<div class="col-md-2">
-<center>
-ABOUT US<br>
-Xiaomi<br>
-Coupon code<br>
-Mediakit<br>
-Culture<br>
-User Agreement<br>
-Product Quality<br>
-Privacy Policy<br>
-Integrity & Compliance<br>
-Environment<br>
-</div>
-
-<div class="col-md-2">
-<center>
-CONTACT US<br>
-Email<br>
-Careers<br>
-</div>
-
-
-<div class="col-md-2">
-<center>
-<p style="font-size:25px;"/>1800 103 6286
-Service hours: 09:00-23:00
-<br></p>
-<button type="button" class="btn btn-Default" style="font-size:20px;">Chat Now</button><br>
-</div>
-</div>
-<hr>
-
-Copyright © 2010 - 2019 Xiaomi. All Rights Reserved 
-</center>
-</div>
-</body>
+     
+    </body>
 </html>
